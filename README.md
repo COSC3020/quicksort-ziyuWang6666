@@ -14,3 +14,14 @@ recursive call considers.
 Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
+
+## Answer
+I think this function will go to the worst-case runtime would be n^2. 
+
+First, it takes the first element in the array as the pivot, the left element starts from the beginning of the array, and the right element is the last element in the array. Then compare the left and right index, partition bigger elements that go to the right side, and smaller elements that go to the left side, and also change the pivot position all the time(time complexity is constant time). Continue to swap positions until it is sorted in place. 
+
+The outer while loop in the worst case will run O(n), n is the number of elements in the array.
+
+while (L < R)  the partition step with the worst case would be O(n). swap position takes constant time. 
+
+So, the total worst-case time analysis should be O(n^2). 
