@@ -7,7 +7,7 @@ const testSort =
     jsc.forall("array nat", function(arr) {
         var a1 = JSON.parse(JSON.stringify(arr));
         var a2 = JSON.parse(JSON.stringify(arr));
-        return JSON.stringify(quicksort(a1)) ==
+        return JSON.stringify(quickSort(a1)) ==
             JSON.stringify(a2.sort(function(a, b)
                 { return a - b; }));
     });
